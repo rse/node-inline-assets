@@ -1,0 +1,8 @@
+
+@import "sample1-screen.css" screen;
+@import "sample1-print.css" print-preview, print;
+
+body {
+    background-color: white;
+}
+

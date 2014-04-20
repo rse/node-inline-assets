@@ -1,0 +1,49 @@
+{
+    "name":        "inline-assets",
+    "homepage":    "http://github.com/rse/node-inline-assets",
+    "description": "Inline External Assets of HTML/CSS Files",
+    "version":     "0.9.0",
+    "license":     "MIT",
+    "author": {
+        "name":    "Ralf S. Engelschall",
+        "email":   "rse@engelschall.com",
+        "url":     "http://engelschall.com"
+    },
+    "keywords": [
+        "inline", "asset", "html", "css", "js", "data", "url", "uri"
+    ],
+    "repository": {
+        "type": "git",
+        "url":  "git://github.com/rse/node-inline-assets.git"
+    },
+    "bugs": {
+        "url":  "http://github.com/rse/node-inline-assets/issues"
+    },
+    "main": "./lib/inline-assets.js",
+    "bin": {
+        "inline-assets": "./bin/inline-assets.js"
+    },
+    "devDependencies": {
+        "grunt":                "~0.4.2",
+        "grunt-cli":            "~0.1.13",
+        "grunt-contrib-jshint": "~0.8.0",
+        "grunt-contrib-clean":  "~0.5.0",
+        "grunt-eslint":         "~0.2.0",
+        "grunt-mocha-test":     "~0.9.0"
+    },
+    "dependencies" : {
+        "package":              "~1.0.1",
+        "lodash":               "~2.4.1",
+        "datauri":              "~0.5.5",
+        "html-minifier":        "~0.5.6",
+        "clean-css":            "~2.1.8",
+        "uglify-js":            "~2.4.13",
+        "chalk":                "~0.4.0",
+        "pretty-bytes":         "~0.1.0",
+        "sprintfjs":            "~1.1.2",
+        "dashdash":             "~1.5.0"
+    },
+    "engines": {
+        "node":                 ">=0.8.0"
+    }
+}
