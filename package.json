@@ -28,19 +28,19 @@
         "grunt-cli":            "~0.1.13",
         "grunt-contrib-jshint": "~0.11.2",
         "grunt-contrib-clean":  "~0.6.0",
-        "grunt-eslint":         "~12.0.0",
+        "grunt-eslint":         "~13.0.0",
         "grunt-mocha-test":     "~0.12.7",
-        "mocha":                "~2.2.4"
+        "mocha":                "~2.2.5"
     },
     "dependencies" : {
         "package":              "~1.0.1",
-        "lodash":               "~3.8.0",
-        "datauri":              "~0.6.0",
+        "lodash":               "~3.9.1",
+        "datauri":              "~0.7.1",
         "html-minifier":        "~0.7.2",
-        "clean-css":            "~3.2.9",
-        "uglify-js":            "~2.4.21",
+        "clean-css":            "~3.2.10",
+        "uglify-js":            "~2.4.23",
         "chalk":                "~1.0.0",
-        "pretty-bytes":         "~1.0.4",
+        "pretty-bytes":         "~2.0.1",
         "sprintfjs":            "~1.1.9",
         "dashdash":             "~1.10.0"
     },
