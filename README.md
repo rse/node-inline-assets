@@ -29,6 +29,59 @@ locally (default) or globally (with option `-g`):
 
     $ npm install [-g] inline-assets
 
+Usage
+-----
+
+### Command-Line Interface (CLI)
+
+```sh
+$ inline-assets \
+  [--verbose] \
+  [--htmlmin] [--cssmin] [--jsmin] \
+  [--pattern <filename-regex>] \
+  [--purge] \
+  <source-file> [<destination-file>]
+```
+
+### Grunt Build Process
+
+```js
+grunt.initConfig({
+    "inline-assets": {
+        options: {
+            verbose: false,
+            htmlmin: false,
+            cssmin:  false,
+            jsmin:   false,
+            pattern: ".+",
+            purge:   false
+        },
+        "example": {
+            src:  "<source-file>",
+            dest: "<destination-file>"
+        },
+        [...]
+    },
+    [...]
+})
+```
+
+### Application Programming Interface (API)
+
+```js
+var fs = require("fs")
+var inlineAssets = require("inline-assets")
+var content = fs.readFileSync("<source-file>", "utf8")
+content = inlineAssets("<destination-file>", "<source-file>", content, {
+    htmlmin: false,
+    cssmin:  false,
+    jsmin:   false,
+    pattern: ".+",
+    purge:   false
+})
+fs.writeFileSync("<destination-file>", content, "utf8")
+```
+
 License
 -------
 
