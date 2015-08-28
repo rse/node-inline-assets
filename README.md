@@ -53,7 +53,7 @@ grunt.initConfig({
             htmlmin: false,
             cssmin:  false,
             jsmin:   false,
-            pattern: ".+",
+            pattern: [ ".+" ],
             purge:   false
         },
         "example": {
@@ -76,7 +76,7 @@ content = inlineAssets("<destination-file>", "<source-file>", content, {
     htmlmin: false,
     cssmin:  false,
     jsmin:   false,
-    pattern: ".+",
+    pattern: [ ".+" ],
     purge:   false
 })
 fs.writeFileSync("<destination-file>", content, "utf8")
