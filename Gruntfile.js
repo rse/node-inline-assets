@@ -39,7 +39,7 @@ module.exports = function (grunt) {
         },
         eslint: {
             options: {
-                config: "eslint.json"
+                configFile: "eslint.json"
             },
             target: [ "bin/inline-assets.js", "lib/inline-assets.js" ]
         },
