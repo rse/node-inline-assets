@@ -6,10 +6,10 @@ Node-Inline-Assets
 for inlining external assets of HTML/CSS files.
 
 <p/>
-<img src="https://nodei.co/npm/node-inline-assets.png?downloads=true&stars=true" alt=""/>
+<img src="https://nodei.co/npm/inline-assets.png?downloads=true&stars=true" alt=""/>
 
 <p/>
-<img src="https://david-dm.org/rse/node-inline-assets.png" alt=""/>
+<img src="https://david-dm.org/rse/inline-assets.png" alt=""/>
 
 Abstract
 --------
