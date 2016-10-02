@@ -73,6 +73,7 @@ var fs = require("fs")
 var inlineAssets = require("inline-assets")
 var content = fs.readFileSync("<source-file>", "utf8")
 content = inlineAssets("<destination-file>", "<source-file>", content, {
+    verbose: false,
     htmlmin: false,
     cssmin:  false,
     jsmin:   false,
@@ -81,6 +82,18 @@ content = inlineAssets("<destination-file>", "<source-file>", content, {
 })
 fs.writeFileSync("<destination-file>", content, "utf8")
 ```
+
+Options
+-------
+
+The processing options are:
+
+- `verbose`: Print verbose processing information.
+- `htmlmin`: Minify processed HTML content (with `html-minifier`).
+- `cssmin`:  Minify processed CSS content (with `clean-css`).
+- `jsmin`:   Minify processed JavaScript content (with `uglify-js`).
+- `pattern`: Comma-separated list of positive/negative filename regex patterns.
+- `purge`:   Purge HTML/CSS/JavaScript references of files excluded by pattern.
 
 License
 -------
