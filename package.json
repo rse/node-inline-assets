@@ -24,7 +24,7 @@
         "inline-assets": "./bin/inline-assets.js"
     },
     "devDependencies": {
-        "grunt":                "1.0.1",
+        "grunt":                "1.0.2",
         "grunt-cli":            "1.2.0",
         "grunt-contrib-jshint": "1.1.0",
         "grunt-contrib-clean":  "1.1.0",
@@ -32,14 +32,14 @@
     },
     "dependencies" : {
         "package":              "1.0.1",
-        "lodash":               "4.17.4",
-        "datauri":              "1.0.5",
-        "html-minifier":        "3.5.8",
-        "clean-css":            "4.1.9",
-        "uglify-js":            "3.3.4",
-        "chalk":                "2.3.0",
+        "lodash":               "4.17.5",
+        "datauri":              "1.1.0",
+        "html-minifier":        "3.5.12",
+        "clean-css":            "4.1.11",
+        "uglify-js":            "3.3.16",
+        "chalk":                "2.3.2",
         "pretty-bytes":         "4.0.2",
-        "sprintfjs":            "1.2.7",
+        "sprintfjs":            "1.2.8",
         "dashdash":             "1.14.1"
     },
     "engines": {
