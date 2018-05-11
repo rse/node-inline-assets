@@ -36,9 +36,9 @@
         "datauri":              "1.1.0",
         "html-minifier":        "3.5.15",
         "clean-css":            "4.1.11",
-        "uglify-js":            "3.3.23",
+        "uglify-js":            "3.3.24",
         "chalk":                "2.4.1",
-        "pretty-bytes":         "4.0.2",
+        "pretty-bytes":         "5.0.0",
         "sprintfjs":            "1.2.9",
         "dashdash":             "1.14.1"
     },
