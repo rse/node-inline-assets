@@ -35,7 +35,7 @@
         "lodash":               "4.17.10",
         "datauri":              "1.1.0",
         "html-minifier":        "3.5.18",
-        "clean-css":            "4.1.11",
+        "csso":                 "3.5.1",
         "uglify-js":            "3.4.4",
         "chalk":                "2.4.1",
         "pretty-bytes":         "5.1.0",

@@ -3,7 +3,8 @@ module.exports = function(grunt) {
     grunt.initConfig({
         "inline-assets": {
             options: {
-                verbose: true
+                verbose: true,
+                cssmin: true
             },
             "sample": {
                 files: [{
