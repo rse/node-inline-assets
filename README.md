@@ -90,7 +90,7 @@ The processing options are:
 
 - `verbose`: Print verbose processing information.
 - `htmlmin`: Minify processed HTML content (with `html-minifier`).
-- `cssmin`:  Minify processed CSS content (with `clean-css`).
+- `cssmin`:  Minify processed CSS content (with `csso`).
 - `jsmin`:   Minify processed JavaScript content (with `uglify-js`).
 - `pattern`: Comma-separated list of positive/negative filename regex patterns.
 - `purge`:   Purge HTML/CSS/JavaScript references of files excluded by pattern.
