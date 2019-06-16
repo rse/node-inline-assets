@@ -24,22 +24,22 @@
         "inline-assets": "./bin/inline-assets.js"
     },
     "devDependencies": {
-        "grunt":                "1.0.3",
+        "grunt":                "1.0.4",
         "grunt-cli":            "1.3.2",
-        "grunt-contrib-jshint": "2.0.0",
+        "grunt-contrib-jshint": "2.1.0",
         "grunt-contrib-clean":  "2.0.0",
-        "grunt-eslint":         "21.0.0"
+        "grunt-eslint":         "21.1.0"
     },
     "dependencies" : {
         "package":              "1.0.1",
         "lodash":               "4.17.11",
-        "datauri":              "1.1.0",
-        "html-minifier":        "3.5.21",
+        "datauri":              "2.0.0",
+        "html-minifier":        "4.0.0",
         "csso":                 "3.5.1",
-        "uglify-js":            "3.4.9",
-        "chalk":                "2.4.1",
-        "pretty-bytes":         "5.1.0",
-        "sprintfjs":            "1.2.12",
+        "uglify-js":            "3.6.0",
+        "chalk":                "2.4.2",
+        "pretty-bytes":         "5.2.0",
+        "sprintfjs":            "1.2.14",
         "dashdash":             "1.14.1"
     },
     "engines": {
