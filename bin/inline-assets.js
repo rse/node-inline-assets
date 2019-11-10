@@ -23,8 +23,6 @@
 **  SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
-/* global process: false */
-
 /*  standard requirements  */
 var fs       = require("fs");
 var path     = require("path");
@@ -135,3 +133,4 @@ if (args.length === 2)
     fs.writeFileSync(dst, content, { encoding: "utf8" });
 else
     process.stdout.write(content);
+
