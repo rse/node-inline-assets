@@ -98,7 +98,7 @@ The processing options are:
 License
 -------
 
-Copyright (c) 2014-2020 Dr. Ralf S. Engelschall (http://engelschall.com/)
+Copyright (c) 2014-2021 Dr. Ralf S. Engelschall (http://engelschall.com/)
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
