@@ -14,14 +14,14 @@
     ],
     "repository": {
         "type": "git",
-        "url":  "git://github.com/rse/node-inline-assets.git"
+        "url":  "git+https://github.com/rse/node-inline-assets.git"
     },
     "bugs": {
         "url":  "http://github.com/rse/node-inline-assets/issues"
     },
-    "main": "./lib/inline-assets.js",
+    "main": "lib/inline-assets.js",
     "bin": {
-        "inline-assets": "./bin/inline-assets.js"
+        "inline-assets": "bin/inline-assets.js"
     },
     "devDependencies": {
         "grunt":                "1.6.1",
@@ -43,6 +43,6 @@
         "dashdash":             "2.0.0"
     },
     "engines": {
-        "node":                 ">=10.0.0"
+        "node":                 ">=16.0.0"
     }
 }

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /*
 **  node-inline-assets -- Inline External Assets of HTML/CSS Files
-**  Copyright (c) 2014-2021 Dr. Ralf S. Engelschall <http://engelschall.com>
+**  Copyright (c) 2014-2023 Dr. Ralf S. Engelschall <http://engelschall.com>
 **
 **  Permission is hereby granted, free of charge, to any person obtaining
 **  a copy of this software and associated documentation files (the
