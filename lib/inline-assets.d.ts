@@ -34,17 +34,17 @@ declare module "inline-assets" {
         /*  processing options  */
         options: {
             /*  Print verbose processing information  */
-            verbose: boolean,
+            verbose?: boolean,
             /*  Minify processed HTML content (with `html-minifier`)  */
-            htmlmin: boolean,
+            htmlmin?: boolean,
             /*  Minify processed CSS content (with `csso`)  */
-            cssmin:  boolean,
+            cssmin?:  boolean,
             /*  Minify processed JavaScript content (with `uglify-js`).  */
-            jsmin:   boolean,
+            jsmin?:   boolean,
             /*  Comma-separated list of positive/negative filename regex patterns.  */
-            pattern: string[],
+            pattern?: string[],
             /*  Purge HTML/CSS/JavaScript references of files excluded by pattern.  */
-            purge:   boolean
+            purge?:   boolean
         }
     ): string
     export default inlineAssets
