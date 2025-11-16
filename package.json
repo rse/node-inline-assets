@@ -9,27 +9,22 @@
         "email":   "rse@engelschall.com",
         "url":     "http://engelschall.com"
     },
-    "keywords": [
-        "inline", "asset", "html", "css", "js", "data", "url", "uri"
-    ],
-    "repository": {
-        "type": "git",
-        "url":  "git+https://github.com/rse/node-inline-assets.git"
-    },
-    "bugs": {
-        "url":  "http://github.com/rse/node-inline-assets/issues"
-    },
-    "main":  "lib/inline-assets.js",
-    "types": "lib/inline-assets.d.ts",
-    "bin": {
-        "inline-assets": "bin/inline-assets.js"
-    },
+    "keywords":    [ "inline", "asset", "html", "css", "js", "data", "url", "uri" ],
+    "repository":  { "type": "git", "url":  "git+https://github.com/rse/node-inline-assets.git" },
+    "bugs":        { "url":  "http://github.com/rse/node-inline-assets/issues" },
+    "main":        "lib/inline-assets.js",
+    "types":       "lib/inline-assets.d.ts",
+    "bin":         { "inline-assets": "bin/inline-assets.js" },
     "devDependencies": {
         "grunt":                "1.6.1",
-        "grunt-cli":            "1.4.3",
-        "grunt-contrib-jshint": "3.2.0",
+        "grunt-cli":            "1.5.0",
         "grunt-contrib-clean":  "2.0.1",
-        "grunt-eslint":         "24.3.0"
+        "grunt-eslint":         "26.0.0",
+        "eslint":               "9.39.1",
+        "@eslint/js":           "9.39.1",
+        "neostandard":          "0.12.2",
+        "eslint-plugin-n":      "17.23.1",
+        "globals":              "globals"
     },
     "dependencies" : {
         "package":              "1.0.1",
@@ -37,13 +32,16 @@
         "datauri":              "4.1.0",
         "html-minifier":        "4.0.0",
         "csso":                 "5.0.5",
-        "uglify-js":            "3.17.4",
-        "chalk":                "4.1.0",
-        "pretty-bytes":         "5.5.0",
+        "uglify-js":            "3.19.3",
+        "chalk":                "4.1.2",
+        "pretty-bytes":         "5.6.0",
         "sprintfjs":            "1.2.17",
         "dashdash":             "2.0.0"
     },
     "engines": {
         "node":                 ">=16.0.0"
+    },
+    "scripts": {
+        "prepublishOnly":       "eslint --config eslint.mjs bin/*.js lib/*.js tasks/*.js"
     }
 }
