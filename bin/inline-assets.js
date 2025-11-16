@@ -24,25 +24,25 @@
 */
 
 /*  standard requirements  */
-var fs       = require("fs");
-var path     = require("path");
-var util     = require("util");
+var fs       = require("fs")
+var path     = require("path")
+var util     = require("util")
 
 /*  extra requirements  */
-var pkg      = require("package");
-var dashdash = require("dashdash");
-var sprintf  = require("sprintfjs");
-var prettyb  = require("pretty-bytes");
-var chalk    = require("chalk");
+var pkg       = require("package")
+var dashdash  = require("dashdash")
+var sprintf   = require("sprintfjs")
+var prettyb   = require("pretty-bytes")
+var chalk     = require("chalk")
 
 /*  internal requirements  */
-var inlineAssets = require("../lib/inline-assets.js");
+var inlineAssets = require("../lib/inline-assets.js")
 
 /*  gracefully die  */
 var die = function (msg) {
-    console.error("inline-assets: ERROR: ", msg);
-    process.exit(1);
-};
+    console.error("inline-assets: ERROR: ", msg)
+    process.exit(1)
+}
 
 /*  command-line argument parsing  */
 var options = [
@@ -62,45 +62,46 @@ var options = [
         help: "Comma-separated list of positive/negative filename regex patterns", helpArg: "PATTERNS" },
     {   names: [ "purge" ], type: "bool", "default": false,
         help: "Purge HTML/CSS/JavaScript references of files excluded by pattern." }
-];
+]
 var parser = dashdash.createParser({
-    options: options,
+    options,
     interspersed: false
-});
+})
 try {
-    var opts = parser.parse(process.argv);
-    var args = opts._args;
-} catch (e) {
-    die(e.message);
+    var opts = parser.parse(process.argv)
+    var args = opts._args
+}
+catch (e) {
+    die(e.message)
 }
 if (opts.help) {
-    var help = parser.help().trimRight();
-    console.log("inline-assets: USAGE: inline-assets [options] arguments\n" + "options:\n" + help);
-    process.exit(0);
+    var help = parser.help().trimRight()
+    console.log("inline-assets: USAGE: inline-assets [options] arguments\n" + "options:\n" + help)
+    process.exit(0)
 }
 else if (opts.version) {
-    var p = pkg(module);
-    console.log(util.format("%s %s", p.name, p.version));
-    process.exit(0);
+    var p = pkg(module)
+    console.log(util.format("%s %s", p.name, p.version))
+    process.exit(0)
 }
 if (args.length < 1 || args.length > 2) {
-    console.log("inline-assets: ERROR: invalid number of arguments (use \"--help\" for details)");
-    process.exit(1);
+    console.log("inline-assets: ERROR: invalid number of arguments (use \"--help\" for details)")
+    process.exit(1)
 }
 
 /*  determine source and destination files  */
-var src = path.resolve(args[0]);
-var dst;
+var src = path.resolve(args[0])
+var dst
 if (args.length === 2)
-   dst = path.resolve(args[1]);
+   dst = path.resolve(args[1])
 else
-   dst = process.cwd();
+   dst = process.cwd()
 
 /*  read source file  */
-var content = fs.readFileSync(src, { encoding: "utf8" });
+var content = fs.readFileSync(src, { encoding: "utf8" })
 
 /*  inline all external assets  */
-var len_before = content.length;
+var len_before = content.length
 content = inlineAssets(dst, src, content, {
     htmlmin: opts.htmlmin,
     cssmin:  opts.cssmin,
@@ -110,27 +111,27 @@ content = inlineAssets(dst, src, content, {
     verbose: function (action, type, filename, lenBefore, lenAfter) {
         if (opts.verbose) {
             if (lenAfter > -1) {
-                filename = path.relative(process.cwd(), filename);
+                filename = path.relative(process.cwd(), filename)
                 var msg = "++ " + sprintf("%-10s", action + ":") + " " +
                     chalk.blue(sprintf("%-5s", type + ":")) + " " +
                     filename +  ": " +
                     chalk.red(prettyb(lenBefore)) + " → " + chalk.green(prettyb(lenAfter)) +
-                    "\n";
-                process.stderr.write(msg);
+                    "\n"
+                process.stderr.write(msg)
             }
         }
     }
-});
+})
 
 if (opts.verbose) {
-    var len_after = content.length;
-    process.stderr.write("++ input:  " + chalk.red(sprintf("%8d", len_before)) + " bytes\n");
-    process.stderr.write("++ output: " + chalk.green(sprintf("%8d", len_after)) + " bytes\n");
+    var len_after = content.length
+    process.stderr.write("++ input:  " + chalk.red(sprintf("%8d", len_before)) + " bytes\n")
+    process.stderr.write("++ output: " + chalk.green(sprintf("%8d", len_after)) + " bytes\n")
 }
 
 /*  write destination file  */
 if (args.length === 2)
-    fs.writeFileSync(dst, content, { encoding: "utf8" });
+    fs.writeFileSync(dst, content, { encoding: "utf8" })
 else
-    process.stdout.write(content);
+    process.stdout.write(content)
 

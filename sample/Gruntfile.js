@@ -20,9 +20,9 @@ module.exports = function(grunt) {
             clean:     [ "dst" ],
             distclean: [ "node_modules" ]
         }
-    });
-    grunt.loadNpmTasks("grunt-contrib-clean");
-    grunt.loadTasks("../tasks");
-    grunt.registerTask("default", [ "inline-assets" ]);
-};
+    })
+    grunt.loadNpmTasks("grunt-contrib-clean")
+    grunt.loadTasks("../tasks")
+    grunt.registerTask("default", [ "inline-assets" ])
+}
 
