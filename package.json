@@ -19,7 +19,8 @@
     "bugs": {
         "url":  "http://github.com/rse/node-inline-assets/issues"
     },
-    "main": "lib/inline-assets.js",
+    "main":  "lib/inline-assets.js",
+    "types": "lib/inline-assets.d.ts",
     "bin": {
         "inline-assets": "bin/inline-assets.js"
     },
