@@ -15,6 +15,7 @@
     "main":        "lib/inline-assets.js",
     "types":       "lib/inline-assets.d.ts",
     "bin":         { "inline-assets": "bin/inline-assets.js" },
+    "upd":         [ "!pretty-bytes", "!chalk" ],
     "devDependencies": {
         "grunt":                "1.6.1",
         "grunt-cli":            "1.5.0",
